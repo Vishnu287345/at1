@@ -1,0 +1,171 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Data Extractor</title>
+</head>
+<body>
+    <h1>LinkedIn Data Extractor</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if success %}
+        <p style="color: green;">File processed successfully! <a href="{{ url_for('download_file', filename=output_filename) }}">Download Results</a></p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        <label for="email">LinkedIn Email:</label>
+        <input type="email" name="email" required><br>
+        <label for="password">LinkedIn Password:</label>
+        <input type="password" name="password" required><br>
+        <label for="file">Upload Excel File:</label>
+        <input type="file" name="file" accept=".xlsx" required><br>
+        <input type="submit" value="Process">
+    </form>
+</body>
+</html> -->
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Data Extractor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+        }
+        .success-message {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn Data Extractor</h1>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        {% if success %}
+            <p class="success-message">File processed successfully! <a href="{{ url_for('download_file', filename=output_filename) }}" class="btn btn-primary">Download Results</a></p>
+        {% endif %}
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">LinkedIn Email:</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">LinkedIn Password:</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="file">Upload Excel File:</label>
+                <input type="file" name="file" class="form-control-file" accept=".xlsx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Process</button>
+        </form>
+    </div>
+</body>
+</html> -->
+<!------------------------------------------------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Data Extractor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+        }
+        .success-message {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn Data Extractor</h1>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        {% if success %}
+            <p id="success-message" class="success-message">File processed successfully! <a href="{{ url_for('download_file', filename=output_filename) }}" class="btn btn-primary">Download Results</a></p>
+            <script>
+                // Hide success message after 5 seconds
+                setTimeout(function(){
+                    document.getElementById('success-message').style.display = 'none';
+                }, 5000);
+            </script>
+        {% endif %}
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">LinkedIn Email:</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">LinkedIn Password:</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="file">Upload Excel File:</label>
+                <input type="file" name="file" class="form-control-file" accept=".xlsx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Process</button>
+        </form>
+    </div>
+</body>
+</html>
